@@ -2,6 +2,10 @@ from tempfile import mkstemp
 from shutil import move
 from os import remove, close
 
+def help():
+	print "help function for file handling utilities\n"
+
+
 def replace(file_path, pattern, subst):
     #Create temp file
     fh, abs_path = mkstemp()

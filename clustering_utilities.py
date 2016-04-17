@@ -7,6 +7,10 @@ from sklearn.decomposition import PCA
 from sklearn.metrics import pairwise_distances_argmin_min
 from random import randint
 
+def help():
+    print "Printing help for clustering functions\n"
+    print "function: reduce_data, parameters: input_vector, number_of_components, output: reduced feature vectors (2D Array)",
+
 
 def reduce_data(input_vector, number_of_components):
     pca = PCA(n_components=number_of_components)
