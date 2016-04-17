@@ -14,8 +14,8 @@ def reduce_data(input_vector, number_of_components):
     return reduced_fv
     
 
-def apply_clustering():
-    normalized_feature_vectors = numpy.loadtxt('normalized_fv.csv', delimiter=',')
+def apply_clustering(normalized_fv_filename):
+    normalized_feature_vectors = numpy.loadtxt(normalized_fv_filename, delimiter=',')
     feature_vectors = reduce_data(normalized_feature_vectors, 2)
 
     KMeans_clusterer = KMeans(n_clusters=10)
@@ -47,19 +47,16 @@ def plot_clusters_2D(feature_vectors, predicted_clusters):
         plt.scatter(feature_vectors[row][0], feature_vectors[row][1], color = colors[predicted_clusters[row]])
     plt.show()
 
-def sort_by_cluster():
-    identifier_df = pd.read_csv("identifiers.csv", header=None)
+def sort_by_cluster(identifiers_filename):
+    identifier_df = pd.read_csv(identifiers_filename, header=None)
     original_index_df =  pd.DataFrame(data=identifier_df.index.values[0:])
     predicted_clusters_df = pd.read_csv("predicted_clusters.csv", header=None)
     both_df = pd.concat([identifier_df, predicted_clusters_df, original_index_df], axis=1)
     both_df.columns = ['identifier', 'cluster_id', 'original_index']
     both_df = both_df.sort_index(by=['cluster_id'])
-    #both_df.to_csv('tags_and_clusters.csv', sep=',', index=False)
     return both_df
 
-#create an array for each cluster (start_index,)
-# unique_clusters, counts = numpy.unique(predicted_clusters, return_counts=True)
-# for 1 to unique clusters: for start_index to start_index+count: do
+
 def align_points_with_feaure_vectors():
     temp_list = []
     for index, row in tag_cluster_df.iterrows():
@@ -81,17 +78,5 @@ def find_representative_points():
                 min_distance = distance
                 representative_index = index
             print representative_index
-
-        #print current_df.iloc[[representative_index]]
-
-            
-
-
-feature_vectors, predicted_clusters, unique_clusters, per_cluster_count = apply_clustering()
-#numpy.savetxt('reduced_fv.csv', feature_vectors)
-plot_clusters_2D(feature_vectors, predicted_clusters)
-#tag_cluster_df = sort_by_cluster()
-#tag_cluster_df = align_points_with_feaure_vectors()
-#find_representative_points()
 
 
