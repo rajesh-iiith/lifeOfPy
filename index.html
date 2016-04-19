@@ -1,38 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
     <title>Life of Py by rajesh-iiith</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Life of Py</h1>
+        <p class="header">A python library with ready-to-use utility functions</p>
 
-    <header>
-      <div class="container">
-        <h1>Life of Py</h1>
-        <h2>A python library with ready-to-use utility functions</h2>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/rajesh-iiith/lifeOfPy/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/rajesh-iiith/lifeOfPy/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/rajesh-iiith/lifeOfPy">View On GitHub</a></li>
+        </ul>
 
-        <section id="downloads">
-          <a href="https://github.com/rajesh-iiith/lifeOfPy/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/rajesh-iiith/lifeOfPy/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/rajesh-iiith/lifeOfPy" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/rajesh-iiith">rajesh-iiith</a></p>
 
-    <div class="container">
-      <section id="main_content">
+
+      </header>
+      <section>
         <h3>
 <a id="welcome-to-lifeofpy-python-library-page" class="anchor" href="#welcome-to-lifeofpy-python-library-page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to LifeOfPy (python library) page</h3>
 
 <h3>
 <a id="function-specifications" class="anchor" href="#function-specifications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Function Specifications</h3>
+
+<h4>
+<a id="file-handling-utilities" class="anchor" href="#file-handling-utilities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>File handling utilities</h4>
+
+<ol>
+<li>replace(file_path, pattern, subst)</li>
+<li>change_delimiter(input_file_path, output_file_path, from_delimiter, to_delimiter)</li>
+<li>remove_folder_contents(folder)</li>
+<li>singleFile_to_multiFile(original_file, first_file_end_point, write_from, write_till, folder_name)</li>
+</ol>
+
+<h4>
+<a id="clustering-utilities" class="anchor" href="#clustering-utilities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clustering utilities</h4>
+
+<ol>
+<li>reduce_data(input_vector, number_of_components)</li>
+<li>apply_clustering(normalized_fv_filename)</li>
+<li>plot_clusters_3D(feature_vectors, predicted_clusters)</li>
+<li>plot_clusters_2D(feature_vectors, predicted_clusters)</li>
+<li>sort_by_cluster(identifiers_filename)</li>
+<li>align_points_with_feaure_vectors()</li>
+<li>find_representative_points()</li>
+</ol>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
@@ -43,8 +68,11 @@ Please share your well built functions to make your contribution.</p>
 <h3>
 <a id="contribute-to-this-library" class="anchor" href="#contribute-to-this-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contribute to this library</h3>
       </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
     </div>
-
-    
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>

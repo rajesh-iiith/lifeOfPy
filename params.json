@@ -1,6 +1,6 @@
 {
   "name": "Life of Py",
   "tagline": "A python library with ready-to-use utility functions",
-  "body": "### Welcome to LifeOfPy (python library) page\r\n\r\n\r\n### Function Specifications\r\n\r\n### Authors and Contributors\r\nstarted by @rajesh-iiith\r\nPlease share your well built functions to make your contribution.\r\n\r\n### Contribute to this library\r\n\r\n",
+  "body": "### Welcome to LifeOfPy (python library) page\r\n\r\n\r\n### Function Specifications\r\n#### File handling utilities\r\n1. replace(file_path, pattern, subst)\r\n2. change_delimiter(input_file_path, output_file_path, from_delimiter, to_delimiter)\r\n3. remove_folder_contents(folder)\r\n4. singleFile_to_multiFile(original_file, first_file_end_point, write_from, write_till, folder_name)\r\n\r\n#### Clustering utilities\r\n1. reduce_data(input_vector, number_of_components)\r\n2. apply_clustering(normalized_fv_filename)\r\n3. plot_clusters_3D(feature_vectors, predicted_clusters)\r\n4. plot_clusters_2D(feature_vectors, predicted_clusters)\r\n5. sort_by_cluster(identifiers_filename)\r\n6. align_points_with_feaure_vectors()\r\n7. find_representative_points()\r\n\r\n### Authors and Contributors\r\nstarted by @rajesh-iiith\r\nPlease share your well built functions to make your contribution.\r\n\r\n### Contribute to this library",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
