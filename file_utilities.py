@@ -59,3 +59,10 @@ def singleFile_to_multiFile(original_file, first_file_end_point, write_from, wri
 				current_file.write(line.rstrip(',\n')+"\n")
 			if (line_count == first_file_end_point):
 				line_count = 0
+				
+				
+def vertical_file_to_integer_list(filename):
+	with open('tracepoints.txt') as tracepoints_line:
+		myList = tracepoints_line.read().splitlines()
+	myList = map(int, myList)
+	return myList, len(myList)
